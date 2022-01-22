@@ -1,4 +1,4 @@
-package contracts.consumeraggregate.favourite
+package contracts.consumeraggregate
 
 import org.springframework.cloud.contract.spec.Contract
 

@@ -1,24 +1,37 @@
 # favourite-service-producer
+***
+## Description
 
 This is a scratch project to explore the use of [Spring Cloud Contracts](https://spring.io/projects/spring-cloud-contract).
 
 This project represents a trivial Favourite service. There are 2 distinct roles and 2 distinct use cases for this project:
 
-| Role | Usage |
-| :- | :- |
-| Consumers of the service | Will write conracts and generate stubs for testing. Will submit PR for requested changes in implementation |
-| Producers (Owners) of the service | Will implement the functionality demanded by the contract. Will fix on PR and then release |
+1. **Consumers** of the service 
+2. **Producers** (Owners) of the service
 
-It is important to understand these roles and the expected workflow as this is the cruicial paradigm of *consumer* driven contracts
+Consumers will write contracts and generate stubs for testing. They will submit a pull request when they have defined their contract requirements but do not implement the functionality themselves.
+
+Producers will implement the functionality of the service. They will review the PR and confirm that the service meets the requirement of the contract. 
+
+It is important to understand these roles and the workflow paradigm of *consumer*-driven contracts.
+
+> Spring Cloud Contract Verifier moves TDD to the level of software architecture.
 
 ## Install
 
 I set up 2 IntelliJ Run Configurations (you can adapt to the tool of your choice)
 
-| Configuration | Command | Usage|
-| :- | :- | :- |
-| Consumer | `mvn clean install -DskipTests` | Only generate the stubs. Consumer is not defining implementation |
-| Producer | `mvn clean install` | Generate and run the tests. Test pass indicates acceptance of contract |
+### Consumer
+
+You only need to generate the stubs. The Consumer is not defining the implementation of the service
+
+```mvn clean install -DskipTests```
+
+### Producer
+
+Generate and run the tests. Test pass indicates acceptance of contract.
+
+```mvn clean install```
 
 ## Usage
 
