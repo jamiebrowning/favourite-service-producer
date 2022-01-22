@@ -8,7 +8,7 @@
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.jb.contract</groupId>
+    <groupId>org.jb.contract</groupId>
     <artifactId>favourite-service-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>producer</name>
